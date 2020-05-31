@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button (click)="atras()"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Concentrate</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3" *ngFor="let n of arrayNumbers" (click)="selectItem(n)">
+        <div class="content animate__animated animate__bounce animate__bounceIn" *ngIf="n.changeIcon && n.hidden === false">
+          <p>{{n.number}}</p>
+        </div>
+        <div class="content2 animate__animated animate__bounce animate__bounceIn" *ngIf="!n.changeIcon && n.hidden === false">
+          <img src="../../../assets/interrogation.png" />
+        </div>
+      </ion-col>
+      
+    </ion-row>
+  </ion-grid>
+</ion-content>

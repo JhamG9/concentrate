@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Concentrate
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -13,8 +13,13 @@
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div id="container" style="width: 90%; margin: auto;">
+    <strong>Esta sera la cantidad de numeros para jugar</strong><br><br><br>
+    <ion-item> 
+      <ion-label position="stacked">Ingresa un numero del 1 al 10</ion-label>
+      <ion-input  (keyup)="updateValue($event)"  name="nombre"  ></ion-input>
+    </ion-item>
+
+    <ion-button (click)="goPageGame()" style="margin-top: 30px;">Empezar a jugar</ion-button>
   </div>
 </ion-content>
